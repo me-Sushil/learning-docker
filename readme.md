@@ -1,7 +1,7 @@
 Install Docker and Docker Compose on your machine (from official Docker site).
 Have your project structured like this (create if not):
 
-my-fullstack-app/
+my-fullstack-app/<br>
 ├── frontend/               # Vite + React frontend
 │   ├── Dockerfile
 │   ├── package.json
@@ -147,3 +147,4 @@ Docker installs:
 axios → inside frontend container
 express, mongoose, etc → inside backend container
 📦 Completely separate node_modules
+
