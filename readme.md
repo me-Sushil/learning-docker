@@ -1,3 +1,118 @@
+Docker Commands<br>
+------------------------------------
+IMAGES :<br>
+List all Local images<br>
+docker images<br>
+
+Delete an image<br>
+docker rmi <image_name><br>
+
+Remove unused images<br>
+docker image prune<br>
+
+Build an image from a Dockerfile<br>
+docker build -t <image_name>:<version> . //version is optional<br>
+docker build -t <image_name>:<version> . -no-cache //build without cache<br>
+
+CONTAINER :<br>
+List all Local containers (running & stopped)<br>
+docker ps -a<br>
+
+List all running containers<br>
+docker ps<br>
+
+Create & run a new container<br>
+docker run <image_name><br>
+//if image not available locally, it’ll be downloaded from DockerHub<br>
+
+Run container in background<br>
+docker run -d <image_name><br>
+
+Run container with custom name<br>
+docker run - -name <container_name> <image_name><br>
+
+Port Binding in container<br>
+docker run -p<host_port>:<container_port> <image_name><br>
+
+Set environment variables in a container<br>
+docker run -e <var_name>=<var_value> <container_name> (or <container_id>)<br>
+
+Start or Stop an existing container<br>
+docker start|stop <container_name> (or <container_id>)<br>
+
+Inspect a running container<br>
+docker inspect <container_name> (or <container_id>)<br>
+
+Delete a container<br>
+docker rm <container_name> (or <container_id>)<br>
+
+TROUBLESHOOT :<br>
+Fetch logs of a container<br>
+docker logs <container_name> (or <container_id)><br>
+
+Open shell inside running container<br>
+docker exec -it <container_name> /bin/bash<br>
+docker exec -it <container_name> sh<br>
+
+
+DOCKER HUB :<br>
+Pull an image from DockerHub<br>
+docker pull <image_name><br>
+
+Publish an image to DockerHub<br>
+docker push <username>/<image_name><br>
+
+Login into DockerHub<br>
+docker login -u <image_name><br>
+Or<br>
+docker login<br>
+//also, docker logout to remove credentials<br>
+
+Search for an image on DockerHub<br>
+docker search <image_name><br>
+
+VOLUMES :<br>
+List all Volumes<br>
+docker volume ls<br>
+
+Create new Named volume<br>
+docker volume create <volume_name><br>
+
+Delete a Named volume<br>
+docker volume rm <volume_name><br>
+
+Mount Named volume with running container<br>
+docker run - -volume <volume_name>:<mount_path><br>
+//or using - -mount<br>
+docker run - -mount type=volume,src=<volume_name>,dest=<mount_path><br>
+
+Mount Anonymous volume with running container<br>
+docker run - -volume <mount_path><br>
+
+To create a Bind Mount<br>
+docker run - -volume <host_path>:<container_path><br>
+//or using - -mount<br>
+docker run - -mount type=bind,src=<host_path>,dest=<container_path><br>
+
+Remove unused local volumes<br>
+docker volume prune //for anonymous volumes<br>
+
+NETWORK :<br>
+List all networks<br>
+docker network ls<br>
+
+Create a network<br>
+docker network create <network_name><br>
+
+Remove a network<br>
+docker network rm <network_name><br>
+
+Remove all unused networks<br>
+docker network prune<br>
+
+####################################################################################
+
+
 Install Docker and Docker Compose on your machine (from official Docker site).<br>
 Have your project structured like this (create if not):<br>
 
