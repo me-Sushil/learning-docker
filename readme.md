@@ -1,6 +1,7 @@
 Docker Commands<br>
 ------------------------------------
 IMAGES :<br>
+--------------<br>
 List all Local images<br>
 docker images<br>
 
@@ -15,6 +16,7 @@ docker build -t <image_name>:<version> . //version is optional<br>
 docker build -t <image_name>:<version> . -no-cache //build without cache<br>
 
 CONTAINER :<br>
+-------------------<br>
 List all Local containers (running & stopped)<br>
 docker ps -a<br>
 
@@ -47,6 +49,7 @@ Delete a container<br>
 docker rm <container_name> (or <container_id>)<br>
 
 TROUBLESHOOT :<br>
+------------------<br>
 Fetch logs of a container<br>
 docker logs <container_name> (or <container_id)><br>
 
@@ -56,6 +59,7 @@ docker exec -it <container_name> sh<br>
 
 
 DOCKER HUB :<br>
+----------------<br>
 Pull an image from DockerHub<br>
 docker pull <image_name><br>
 
@@ -72,6 +76,7 @@ Search for an image on DockerHub<br>
 docker search <image_name><br>
 
 VOLUMES :<br>
+-------------------<br>
 List all Volumes<br>
 docker volume ls<br>
 
@@ -98,6 +103,7 @@ Remove unused local volumes<br>
 docker volume prune //for anonymous volumes<br>
 
 NETWORK :<br>
+------------------<br>
 List all networks<br>
 docker network ls<br>
 
