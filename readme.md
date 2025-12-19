@@ -153,7 +153,7 @@ docker network prune<br>
 
 ####################################################################################
 
-# Docker impliment process
+# Docker impliment process (Raw Process)
 Install Docker and Docker Compose on your machine (from official Docker site).<br>
 Have your project structured like this (create if not):<br>
 
@@ -269,6 +269,7 @@ Docker is a runtime, not a replacement for development tools.
 
 ##############################################################
 
+# Docker Impliment in fullstack project Full Process Step by step
 
 🔹 STEP 1: You run npm locally (ONE TIME)<br>
 npm create vite@latest frontend<br>
