@@ -1,5 +1,40 @@
 Docker Commands<br>
 ------------------------------------
+
+
+
+Development Mode (with hot reload):<br>
+
+# Start all services<br>
+docker-compose up<br>
+
+# Start in detached mode<br>
+docker-compose up -d<br>
+
+# View logs<br>
+docker-compose logs -f<br>
+
+# Stop services<br>
+docker-compose down<br>
+
+# Stop and remove volumes<br>
+docker-compose down -v<br>
+
+--------------------------
+Production Build:<br>
+# Build images<br>
+docker-compose build --no-cache<br>
+
+# Start production<br>
+docker-compose -f docker-compose.yml up -d<br>
+
+# Check running containers<br>
+docker ps<br>
+
+# View logs for specific service<br>
+docker-compose logs backend<br>
+
+
 IMAGES :<br>
 --------------<br>
 List all Local images<br>
