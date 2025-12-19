@@ -1,5 +1,5 @@
-Install Docker and Docker Compose on your machine (from official Docker site).
-Have your project structured like this (create if not):
+Install Docker and Docker Compose on your machine (from official Docker site).<br>
+Have your project structured like this (create if not):<br>
 
 my-fullstack-app/<br>
 ├── frontend/               # Vite + React frontend<br>
