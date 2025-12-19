@@ -3,39 +3,39 @@ Docker Commands<br>
 
 
 
-Development Mode (with hot reload):<br>
+# Development Mode (with hot reload):<br>
 
-# Start all services<br>
+ Start all services<br>
 docker-compose up<br>
 
-# Start in detached mode<br>
+ Start in detached mode<br>
 docker-compose up -d<br>
 
-# View logs<br>
+ View logs<br>
 docker-compose logs -f<br>
 
-# Stop services<br>
+ Stop services<br>
 docker-compose down<br>
 
-# Stop and remove volumes<br>
+ Stop and remove volumes<br>
 docker-compose down -v<br>
 
 --------------------------
-Production Build:<br>
-# Build images<br>
+# Production Build:<br>
+ Build images<br>
 docker-compose build --no-cache<br>
 
-# Start production<br>
+ Start production<br>
 docker-compose -f docker-compose.yml up -d<br>
 
-# Check running containers<br>
+ Check running containers<br>
 docker ps<br>
 
-# View logs for specific service<br>
+ View logs for specific service<br>
 docker-compose logs backend<br>
 
 
-IMAGES :<br>
+# IMAGES :<br>
 --------------<br>
 List all Local images<br>
 docker images<br>
@@ -50,7 +50,7 @@ Build an image from a Dockerfile<br>
 docker build -t <image_name>:<version> . //version is optional<br>
 docker build -t <image_name>:<version> . -no-cache //build without cache<br>
 
-CONTAINER :<br>
+# CONTAINER :<br>
 -------------------<br>
 List all Local containers (running & stopped)<br>
 docker ps -a<br>
@@ -83,7 +83,7 @@ docker inspect <container_name> (or <container_id>)<br>
 Delete a container<br>
 docker rm <container_name> (or <container_id>)<br>
 
-TROUBLESHOOT :<br>
+# TROUBLESHOOT :<br>
 ------------------<br>
 Fetch logs of a container<br>
 docker logs <container_name> (or <container_id)><br>
@@ -93,7 +93,7 @@ docker exec -it <container_name> /bin/bash<br>
 docker exec -it <container_name> sh<br>
 
 
-DOCKER HUB :<br>
+# DOCKER HUB :<br>
 ----------------<br>
 Pull an image from DockerHub<br>
 docker pull <image_name><br>
@@ -110,7 +110,7 @@ docker login<br>
 Search for an image on DockerHub<br>
 docker search <image_name><br>
 
-VOLUMES :<br>
+# VOLUMES :<br>
 -------------------<br>
 List all Volumes<br>
 docker volume ls<br>
@@ -137,7 +137,7 @@ docker run - -mount type=bind,src=<host_path>,dest=<container_path><br>
 Remove unused local volumes<br>
 docker volume prune //for anonymous volumes<br>
 
-NETWORK :<br>
+# NETWORK :<br>
 ------------------<br>
 List all networks<br>
 docker network ls<br>
