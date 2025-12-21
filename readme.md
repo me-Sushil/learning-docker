@@ -391,7 +391,7 @@ npm install axios<br>
 npm run dev<br>
 
 
-and<br>
+- Backend<br>
 
 npm init -y<br>
 npm install express mongoose jsonwebtoken cors dotenv<br>
@@ -405,6 +405,16 @@ What this REALLY does:<br>
 The important file is package.json, not node_modules<br>
 
 🔹 STEP 2: Docker ignores local node_modules<br>
+
+project/<br>
+├── .dockerignore          # For any root-level builds<br>
+├── backend/<br>
+│   ├── .dockerignore      # ← REQUIRED<br>
+│   └── Dockerfile<br>
+├── frontend/<br>
+│   ├── .dockerignore      # ← REQUIRED<br>
+│   └── Dockerfile<br>
+└── docker-compose.yml<br>
 
 Because of:<br>
 node_modules<br>
