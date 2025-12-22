@@ -423,10 +423,34 @@ inside .dockerignore<br>
 Docker does NOT copy your laptop’s node_modules.<br>
 
 🔹 STEP 3: Docker installs dependencies INSIDE container<br>
+Create the Frontend Dockerfile (frontend/Dockerfile):<br>
+
+Dockerfile<br>
+
+FROM node:20-slim<br>
+WORKDIR /app<br>
+COPY package.json .<br>
+RUN npm install<br>
+COPY . .<br>
+EXPOSE 5173<br>
+
+ --host allows the Vite server to be accessible outside the container<br>
+CMD ["npm", "run", "dev", "--", "--host"]<br>
+
 RUN npm install<br>
 
 Docker installs:<br>
 axios → inside frontend container<br>
 express, mongoose, etc → inside backend container<br>
 📦 Completely separate node_modules<br>
+
+
+now , we need mongodb and mongo-express,  they are two different container, they have their port, without
+port access they cant comunincate each other, 
+now we want they communicate without port and limitation lets setup -  Docker Network
+
+to check network - docker network ls
+to create new network -  docker network create mongo-network
+
+
 
