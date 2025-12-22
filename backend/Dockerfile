@@ -23,3 +23,6 @@ COPY . .
 # nodemon automatically restarts the server when code changes
 # This is ideal for development environments
 CMD ["npx", "nodemon", "server.js"]
+
+
+
